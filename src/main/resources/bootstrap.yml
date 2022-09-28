@@ -1,0 +1,21 @@
+#server:
+#    port: 9999
+#spring:
+#    application:
+#        name: client
+#    config:
+#        import: configserver:http://localhost:8888/
+#    profiles:
+#        active: development
+spring:
+  application:
+    name: client
+  profiles:
+    active: production
+  config:
+    import: optional:configserver:http://localhost:8888
+  cloud:
+    bootstrap:
+      enabled: true
+server:
+  port: 9000
