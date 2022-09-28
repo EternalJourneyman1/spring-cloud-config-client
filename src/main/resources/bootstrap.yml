@@ -1,17 +1,8 @@
-#server:
-#    port: 9999
-#spring:
-#    application:
-#        name: client
-#    config:
-#        import: configserver:http://localhost:8888/
-#    profiles:
-#        active: development
 spring:
   application:
     name: client
   profiles:
-    active: production
+    active: development
   config:
     import: optional:configserver:http://localhost:8888
   cloud:
