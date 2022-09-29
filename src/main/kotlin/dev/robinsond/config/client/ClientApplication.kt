@@ -12,13 +12,11 @@ import org.springframework.web.bind.annotation.RestController
 @SpringBootApplication
 @RestController
 class ClientApplication {
-
 	@Value("\${user.phone}")
-	private val phone: String? = null
+	lateinit var phone: String
 
 	@Value("\${user.role}")
-	var role: String? = "not config server"
-
+	lateinit var role: String
 
 	@GetMapping(
 		value = ["/profile/{firstName}"],
