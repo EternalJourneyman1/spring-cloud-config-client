@@ -4,6 +4,9 @@ spring:
   profiles:
     active: development
   config:
+    fail-fast: true
+    retry:
+      max-attempts: 10
     import: optional:configserver:http://localhost:8888
   cloud:
     bootstrap:
